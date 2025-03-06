@@ -7,7 +7,7 @@ app.all('/:any', tutorial);
 
 function delayFunction(req, res) {
     let seconds = parseInt(req.params.seconds, 10);
-    if (isNaN(seconds) || seconds < 1) seconds = 1; // Garantir que seja pelo menos 1 segundo
+    if (isNaN(seconds) || seconds < 1) seconds = 1;
 
     setTimeout(() => {
         res.json({ message: `Response after ${seconds} seconds`, status: "success" });
